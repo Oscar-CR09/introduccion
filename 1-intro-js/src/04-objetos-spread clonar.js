@@ -48,11 +48,20 @@ const invoice ={
     }
 
 };
-console.log(invoice.company?.name); //operador opcional chaining 
-console.log(invoice.client?.name);
 
-if (invoice.company !== undefined && invoice.company.name) {
-    console.log('perfecto!!!');
+const invoice2={...invoice};
+
+//const invoice2 = invoice;
+
+const result =invoice === invoice2;
+
+if(result){
+    console.log(result)
 }else{
-    console.log('no viene la empresa');
+    console.log('no son iguales') 
 }
+
+invoice2.id = 20;
+
+console.log(invoice.id);
+console.log(invoice2.id);
