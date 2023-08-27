@@ -49,19 +49,12 @@ const invoice ={
 
 };
 
-const invoice2={...invoice};
+//invoice.client.name = 'skar';
+//invoice.total= 2000;
 
-//const invoice2 = invoice;
+console.log(invoice);
 
-const result =invoice === invoice2;
+const greeting = invoice.greeting();
+console.log(greeting);
+console.log(`total: ${invoice.total()}`);
 
-if(result){
-    console.log(result)
-}else{
-    console.log('no son iguales') 
-}
-
-invoice2.id = 20;
-
-console.log(invoice.id);
-console.log(invoice2.id);
