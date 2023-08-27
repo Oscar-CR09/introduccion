@@ -1,6 +1,14 @@
 
-let name = 'pepe'
-name = 'oscar'
+let firstname = 'pepe';
+firstname = 'oscar';
 
-const lastname = 'cervantes'
-console.log("hola mundo" + name + lastname );
+const lastname = 'cervantes';
+const condicion =true;
+if (condicion) {
+    const lastname = 'x'
+    console.log(lastname)
+}
+   
+   
+console.log(`hola mundo 
+${firstname} ${lastname} `);
