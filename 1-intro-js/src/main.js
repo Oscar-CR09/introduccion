@@ -1,14 +1,14 @@
 
-let firstname = 'pepe';
-firstname = 'oscar';
 
-const lastname = 'cervantes';
-const condicion =true;
-if (condicion) {
-    const lastname = 'x'
-    console.log(lastname)
+function sayHello(name, age) {
+
+    const greeting= `Hola Mundo function! ${name, age}`;
+
+    //console.log('Hola Mundo function ');
+
+    return greeting;
 }
-   
-   
-console.log(`hola mundo 
-${firstname} ${lastname} `);
+
+const result = sayHello('Oscar', 10);
+
+console.log(result);
