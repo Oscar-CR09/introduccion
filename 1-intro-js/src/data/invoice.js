@@ -1,5 +1,5 @@
 
-const invoice = [
+export const invoice = [
 
     {
         id: 1,
@@ -93,37 +93,19 @@ const invoice = [
 
 ];
 
-const invoiceName = invoice.map(i => {
-    return i.name;
 
-})
+export default (clientName) => {
 
-console.log(invoice);
+    return invoice.find(i => i.client.name === clientName);
 
-console.log(invoiceName);
+}
 
-const invoiceCliente = invoice.map(i => {
-    return i.client.name;
+/*
+export{
+    invoice as default,
+    invoiceByCliente
+}
 
-});
+//otra forma de exportar quitando export de y manejarla juntandolos
+*/
 
-console.log(invoiceCliente);
-
-const invoiceById = invoice.find(i => i.id === 3);
-console.log(invoiceById);
-
-const invoiceByname = invoice.find(i => i.client === 'Oscar');
-console.log(invoiceByname);
-
-const invoiceFiilter = invoice.filter(i => i.id >1);
-console.log(invoiceFiilter);
-
-console.log('filter eliminar')
-const invoiceDelete = invoice.filter(i => i.id !=2);
-console.log(invoiceDelete);
-
-console.log('some')
-const result = invoice.some(i => i.client.name === 'Oscar')
-console.log(result);
-
-//find filter some  
