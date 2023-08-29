@@ -100,6 +100,10 @@ export default (clientName) => {
 
 }
 
+export const invoiceById = (id) => {
+    return invoice.find(i => i.id === id);
+}
+
 /*
 export{
     invoice as default,
