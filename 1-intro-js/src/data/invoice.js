@@ -104,6 +104,26 @@ export const invoiceById = (id) => {
     return invoice.find(i => i.id === id);
 }
 
+export const finInvoicesById = (id) =>{
+    const promise = new Promise((resolve, reject) => {
+
+        setTimeout(() => {
+            const result = invoiceById(id);
+    
+            if (result) {
+                resolve(result);
+            }else {
+                reject('error no exite la factura por el id');
+            }
+           
+    
+        },2500 );
+    });
+
+    return promise;
+    }
+
+    
 /*
 export{
     invoice as default,

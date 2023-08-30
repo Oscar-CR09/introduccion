@@ -1,22 +1,14 @@
-import{ invoiceById } from './data/invoice';
-
-const promise = new Promise((resolve, reject) =>{
-    setTimeout(() => {
-        const result = invoiceById(2);
-
-        if (result) {
-            resolve(result);
-        }else {
-            reject('error no exite la factura por el id');
-        }
-       
-
-    },2500 );
-});
-
-promise.then((json) => {
-    console.log(json);
-    console.log('realizada con alguna tarea con demora ')
-}).catch((error) =>{
-    console.error(error);
+const httpsCliente = fetch('https://jsonplaceholder.typicode.com/users');
+/*
+httpsCliente.then(response =>{
+    //console.log(response)
+    response.json().then(data => {
+        console.log(data)
+    })
 })
+*/ 
+httpsCliente
+.then(response =>response.json())
+.then(data => console.log(data));
+
+console.log('hola que tal')
